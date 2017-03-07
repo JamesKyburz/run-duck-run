@@ -1,0 +1,16 @@
+{
+  "name": "run-duck-run",
+  "description": "A generator run function",
+  "keywords": ["generator", "runner", "server-base"],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jameskyburz/run-duck-run.git"
+  },
+  "author": {
+    "name": "James Kyburz",
+    "email": "james.kyburz@gmail.com"
+  },
+  "main": "index.js",
+  "version": "1.0.0",
+  "license": "MIT"
+}
