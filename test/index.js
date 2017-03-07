@@ -43,3 +43,12 @@ tape('generator handling promise rejections', (t) => {
     t.fail()
   }, t.pass)()
 })
+
+const t = (fn) => (t) => run(fn, t.fail)(t)
+
+tape('test generator test :)', t(function * (t) {
+  const promise = yield Promise.resolve('promise data!')
+  t.equals('promise data!', promise, 'data received by promise')
+  t.end()
+}))
+
