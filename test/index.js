@@ -43,11 +43,3 @@ tape('generator handling promise rejections', (t) => {
     t.fail()
   }, t.pass)()
 })
-
-
-
-
-
-
-
-
