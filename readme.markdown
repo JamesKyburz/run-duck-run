@@ -4,6 +4,10 @@ A generator function runner
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
 
+[![build status](https://api.travis-ci.org/JamesKyburz/run-duck-run.svg)](https://travis-ci.org/JamesKyburz/run-duck-run)
+[![npm](https://img.shields.io/npm/v/run-duck-run.svg)](https://npmjs.org/package/run-duck-run)
+[![downloads](https://img.shields.io/npm/dm/run-duck-run.svg)](https://npmjs.org/package/run-duck-run)
+
 # usage
 
 ```javascript

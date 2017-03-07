@@ -16,5 +16,12 @@
   },
   "main": "index.js",
   "version": "1.0.1",
+  "scripts": {
+    "test": "tape ./test | faucet"
+  },
+  "devDependencies": {
+    "faucet": "0.0.1",
+    "tape": "4.6.3"
+  },
   "license": "MIT"
 }
