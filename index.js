@@ -6,7 +6,7 @@ function runGenerator (fn, error) {
     next(it.next())
     function next (result) {
       if (result.done) return
-      if (Promise.resolve(result.value) === result.value) {
+      if (result.value && typeof result.value.then === 'function') {
         result.value
           .then((value) => next(it.next(value)))
           .catch(error)
