@@ -51,4 +51,3 @@ tape('test generator test :)', t(function * (t) {
   t.equals('promise data!', promise, 'data received by promise')
   t.end()
 }))
-

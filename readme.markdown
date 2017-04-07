@@ -18,7 +18,13 @@ A generator function runner
 
   const run = require('run-duck-run')
 
-  run(foo, (err) => { console.error(err) })()
+  run(foo, (err) => {
+    if (err) {
+      console.error(err)
+    } else {
+      console.log('all good')
+    }
+  })()
 
   // done cb
 ```
@@ -33,7 +39,7 @@ A generator function runner
 
   const run = require('run-duck-run')
 
-  run(foo, (err) => { console.error(err) })()
+  run(foo, (err) => { })()
 
   // done promise
 ```
