@@ -1,5 +1,7 @@
 # 🦆 run-duck-run 🦆
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/JamesKyburz/run-duck-run.svg)](https://greenkeeper.io/)
+
 A generator function runner
 
 [![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
