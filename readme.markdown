@@ -1,14 +1,12 @@
 # 🦆 run-duck-run 🦆
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/JamesKyburz/run-duck-run.svg)](https://greenkeeper.io/)
-
 A generator function runner
 
-[![js-standard-style](https://cdn.rawgit.com/feross/standard/master/badge.svg)](https://github.com/feross/standard)
-
+[![js-standard-style](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/feross/standard)
 [![build status](https://api.travis-ci.org/JamesKyburz/run-duck-run.svg)](https://travis-ci.org/JamesKyburz/run-duck-run)
 [![npm](https://img.shields.io/npm/v/run-duck-run.svg)](https://npmjs.org/package/run-duck-run)
 [![downloads](https://img.shields.io/npm/dm/run-duck-run.svg)](https://npmjs.org/package/run-duck-run)
+[![Greenkeeper badge](https://badges.greenkeeper.io/JamesKyburz/run-duck-run.svg)](https://greenkeeper.io/)
 
 # usage
 
