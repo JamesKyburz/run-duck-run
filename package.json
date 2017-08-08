@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "faucet": "0.0.1",
-    "tape": "4.7.0"
+    "tape": "4.8.0"
   },
   "license": "MIT"
 }
