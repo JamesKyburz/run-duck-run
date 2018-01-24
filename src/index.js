@@ -7,10 +7,9 @@ function runGenerator (fn, done) {
     function next (result) {
       if (result.done) return done(null)
       if (result.value && typeof result.value.then === 'function') {
-        result.value
+        return result.value
           .then((value) => next(it.next(value)))
           .catch(done)
-        return
       }
       if (typeof result.value === 'function') {
         result.value((err, value) => {
