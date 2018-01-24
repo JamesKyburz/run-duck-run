@@ -14,11 +14,14 @@
     "name": "James Kyburz",
     "email": "james.kyburz@gmail.com"
   },
-  "main": "index.js",
+  "main": "src/index.js",
   "version": "2.0.2",
   "scripts": {
     "test": "tape ./test | faucet"
   },
+  "files": [
+    "src"
+  ],
   "devDependencies": {
     "faucet": "0.0.1",
     "tape": "4.8.0"
