@@ -8,16 +8,24 @@ function runGenerator (fn, done) {
       if (result.done) return done(null)
       if (result.value && typeof result.value.then === 'function') {
         return result.value
-          .then((value) => next(it.next(value)))
-          .catch(done)
+          .then(value => next(it.next(value)))
+          .catch(handleError)
       }
       if (typeof result.value === 'function') {
         result.value((err, value) => {
-          if (err) return done(err)
+          if (err) return handleError(err)
           next(it.next(value))
         })
       } else {
         next(it.next(result.value))
+      }
+    }
+    function handleError (err) {
+      try {
+        it.throw(err)
+        next(it.next())
+      } catch (_) {
+        done(err)
       }
     }
   }
