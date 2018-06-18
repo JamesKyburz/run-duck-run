@@ -3,7 +3,11 @@ module.exports = runGenerator
 function runGenerator (fn, done) {
   return function () {
     const it = fn(...arguments)
-    next(it.next())
+    try {
+      next(it.next())
+    } catch (err) {
+      done(err)
+    }
     function next (result) {
       if (result.done) return done(null)
       if (result.value && typeof result.value.then === 'function') {
