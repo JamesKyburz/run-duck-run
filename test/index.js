@@ -1,7 +1,7 @@
-const tape = require('tape')
+const { test } = require('tap')
 const run = require('../')
 
-tape('generator function with callbacks', t => {
+test('generator function with callbacks', t => {
   run(function * () {
     t.plan(2)
     const data = yield cb => cb(null, 'data!')
@@ -9,7 +9,7 @@ tape('generator function with callbacks', t => {
   }, t.error)()
 })
 
-tape('generator function with promises', t => {
+test('generator function with promises', t => {
   run(function * () {
     t.plan(2)
     const data = yield Promise.resolve('data!')
@@ -17,7 +17,7 @@ tape('generator function with promises', t => {
   }, t.error)()
 })
 
-tape('generator function with a mix', t => {
+test('generator function with a mix', t => {
   run(function * () {
     t.plan(3)
     const promise = yield Promise.resolve('promise data!')
@@ -28,7 +28,7 @@ tape('generator function with a mix', t => {
   }, t.error)()
 })
 
-tape('generator handling callback errors', t => {
+test('generator handling callback errors', t => {
   run(
     function * () {
       t.plan(1)
@@ -39,7 +39,15 @@ tape('generator handling callback errors', t => {
   )()
 })
 
-tape('generator handling promise rejections', t => {
+test('yield single value', t => {
+  run(function * () {
+    t.plan(2)
+    const data = yield 'data'
+    t.equals(data, 'data')
+  }, t.error)()
+})
+
+test('generator handling promise rejections', t => {
   run(
     function * () {
       t.plan(1)
@@ -50,7 +58,7 @@ tape('generator handling promise rejections', t => {
   )()
 })
 
-tape('generator with try catch + promise rejection', t => {
+test('generator with try catch + promise rejection', t => {
   run(
     function * () {
       t.plan(3)
@@ -66,7 +74,7 @@ tape('generator with try catch + promise rejection', t => {
   )()
 })
 
-tape('generator with try catch + callback error', t => {
+test('generator with try catch + callback error', t => {
   run(
     function * () {
       t.plan(3)
@@ -82,13 +90,19 @@ tape('generator with try catch + callback error', t => {
   )()
 })
 
+test('synchronous error handling', t => {
+  run(function * () {
+    throw new Error('error')
+  }, t.end)()
+})
+
 const t = fn => t => run(fn, err => (err ? t.fail() : t.pass()))(t)
 
-tape(
+test(
   'test generator test :)',
   t(function * (t) {
+    t.plan(2)
     const promise = yield Promise.resolve('promise data!')
     t.equals('promise data!', promise, 'data received by promise')
-    t.end()
   })
 )

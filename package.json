@@ -17,14 +17,13 @@
   "main": "src/index.js",
   "version": "2.1.1",
   "scripts": {
-    "test": "tape ./test | faucet"
+    "test": "tap ./test"
   },
   "files": [
     "src"
   ],
   "devDependencies": {
-    "faucet": "0.0.1",
-    "tape": "4.9.0"
+    "tap": "14.10.5"
   },
   "license": "MIT"
 }
