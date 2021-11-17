@@ -23,7 +23,7 @@
     "src"
   ],
   "devDependencies": {
-    "tap": "15.0.9"
+    "tap": "15.1.1"
   },
   "license": "MIT"
 }
